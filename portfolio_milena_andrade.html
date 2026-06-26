@@ -228,9 +228,9 @@ body{font-family:'Inter',-apple-system,sans-serif;background:var(--bg);color:var
   <div class="hero-blob1"></div>
   <div class="hero-blob2"></div>
   <div class="hero-inner">
-    <div class="hero-badge"><span></span> Portfólio CRM &amp; Lifecycle Marketing</div>
+    <div class="hero-badge"><span></span> Portfólio CRM</div>
     <h1 class="hero-name">Milena<br><span class="hero-hl">Andrade</span></h1>
-    <p class="hero-sub">Analista de CRM &nbsp;·&nbsp; <strong>Salesforce Marketing Cloud · Klaviyo · n8n</strong></p>
+    <p class="hero-sub">Analista de CRM - <strong>Salesforce Marketing Cloud · Klaviyo</strong></p>
     
     <div class="stats-row">
       <div class="stat-item">
@@ -239,7 +239,7 @@ body{font-family:'Inter',-apple-system,sans-serif;background:var(--bg);color:var
       </div>
       <div class="stat-item">
         <span class="stat-val blue">5,88%</span>
-        <span class="stat-lbl">Conversão top segmento</span>
+        <span class="stat-lbl">Conversão WHATSAPP</span>
       </div>
 
 
@@ -251,18 +251,18 @@ body{font-family:'Inter',-apple-system,sans-serif;background:var(--bg);color:var
 <div class="stack-bar">
   <div class="stack-inner">
     <span class="stack-lbl">Stack</span>
-    <span class="chip">Salesforce MC</span>
+    <span class="chip">Salesforce Marketing Cloud</span>
     <span class="chip">Journey Builder</span>
-    <span class="chip">Klaviyo</span>
-    <span class="chip">n8n</span>
-    <span class="chip">SQL / Query Studio</span>
+        <span class="chip">Data Extension</span>
+        <span class="chip">CloudPages</span>
+    <span class="chip">SQL (Query Studio)</span>
     <span class="chip">AMPscript</span>
     <span class="chip">HTML/CSS</span>
-    <span class="chip">GA4</span>
+  <span class="chip">API REST / Webhooks</span>
+        <span class="chip">n8n</span>
+        <span class="chip">Klaviyo</span>
     <span class="chip">Shopify</span>
-    <span class="chip">OctaDesk</span>
-    <span class="chip">CloudPages</span>
-    <span class="chip">API REST</span>
+        <span class="chip">GA4 & GTM</span>
   </div>
 </div>
 
@@ -271,281 +271,37 @@ body{font-family:'Inter',-apple-system,sans-serif;background:var(--bg);color:var
   <p class="eyebrow">Projetos selecionados</p>
   <h2 class="section-title">Do problema real ao resultado <span class="hl">mensurável</span></h2>
 
-  <!-- =========== P1: COPA DO MUNDO =========== -->
+  <!-- =========== P1: ATRIBUIÇÃO DE RECEITA CRM (SFMC) =========== -->
   <div class="pcard">
     <div class="pcard-top">
-      <div class="pcard-icon icon-blue">🌐</div>
-      <div class="pcard-meta">
-        <p class="pcard-co">2025</p>
-        <h3 class="pcard-title">Funil de Aquisição Omnichannel — Copa do Mundo 2026</h3>
-      </div>
-    </div>
-    <div class="pcard-body">
-      <p class="challenge"><strong>150 lojas, uma campanha, zero ferramenta de redirecionamento paga.</strong> O desafio era direcionar cada lead captado para o grupo de WhatsApp correto — por região — de forma automática, com rastreamento completo e sem depender de plataformas externas.</p>
-
-      <p class="sub-label">O que foi feito</p>
-      <div class="grid2">
-        <div class="mini"><p class="mini-lbl">Captura e segmentação</p><p class="mini-txt">Landing Page hospedada no Salesforce com captura em tempo real e seleção de loja pelo próprio lead. Dados gravados via UpsertData na Data Extension.</p></div>
-        <div class="mini"><p class="mini-lbl">Redirecionamento automático</p><p class="mini-txt">AMPscript consulta o Mapa de Grupos por LojaCodigo e redireciona para o link de WhatsApp correto após 3 segundos do cadastro.</p></div>
-        <div class="mini"><p class="mini-lbl">Lista de espera com cronômetro</p><p class="mini-txt">Página de espera até 08/04 com countdown para gerar antecipação. Após a abertura: redirecionamento automático para o grupo da unidade.</p></div>
-        <div class="mini"><p class="mini-lbl">Rastreamento completo</p><p class="mini-txt">GTM com evento form_conversion no DataLayer. UTMs por canal (Instagram, PDV, Ads). 100% de atribuição no Salesforce via GA4.</p></div>
-      </div>
-
-      <p class="sub-label">Landing page interativa</p>
-      <div class="device-showcase">
-        <div class="device-wrap">
-          <p class="device-label-top">Página de cadastro</p>
-          <div class="phone-frame">
-            <div class="phone-notch"></div>
-            <div class="phone-screen">
-              <iframe title="Landing page Copa 2026" src="pagina_de_cadastro.html" style="width:100%;height:100%;border:none;display:block;"></iframe></iframe>
-            </div>
-          </div>
-        </div>
-        <div class="device-wrap">
-          <p class="device-label-top">Página de espera com cronômetro</p>
-          <div class="phone-frame">
-            <div class="phone-notch"></div>
-            <div class="phone-screen">
-              <iframe title="Página de espera Copa 2026" src="contagem_regressiva.html" style="width:100%;height:100%;border:none;display:block;"></iframe></iframe>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <p class="sub-label">Arquitetura técnica no Salesforce</p>
-      <div class="evblock">
-        <div class="ev-label">Data Extensions no Contact Builder</div>
-        <div class="de-name">Leads_Grupo_WhatsApp_Copa2026</div>
-        <div class="de-path">Extensões de Dados / Jornada / Leads_Grupo_WhatsApp_Copa2026</div>
-        <div style="overflow-x:auto;margin-bottom:16px;">
-          <table class="de-table">
-            <thead><tr><th>LeadKey</th><th>Nome</th><th>LojaCodigo</th><th>Região</th><th>Tag</th><th>OptIn</th><th>utm_source</th><th>utm_campaign</th></tr></thead>
-            <tbody>
-              <tr><td class="td-blue">44991582285</td><td>Milena</td><td>REG_MARINGA</td><td>Maringá</td><td class="td-hl">Colecionador Copa 2026</td><td class="td-hl">True</td><td>whatsapp</td><td>copa2026_convite</td></tr>
-              <tr><td class="td-blue">55449997610905</td><td>Vitor C Walter</td><td>REG_MARINGA</td><td>Maringá</td><td class="td-hl">Colecionador Copa 2026</td><td class="td-hl">True</td><td>whatsapp</td><td>copa2026_convite</td></tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="de-name">Mapa_Grupos_WhatsApp_Copa2026</div>
-        <div class="de-path">Extensões de Dados / Jornada / Mapa_Grupos_WhatsApp_Copa2026</div>
-        <div style="overflow-x:auto;margin-bottom:16px;">
-          <table class="de-table">
-            <thead><tr><th>LojaCodigo</th><th>GrupoLink</th><th>LojaName</th><th>Região</th></tr></thead>
-            <tbody>
-              <tr><td class="td-hl">REG_MARINGA</td><td class="td-blue">chat.whatsapp.com/DotgasUHQpn46h1ViPKWWi</td><td>Maringá e região</td><td>Maringá</td></tr>
-              <tr><td style="color:rgba(255,255,255,0.2)">+ 149 lojas</td><td style="color:rgba(255,255,255,0.15)">...</td><td style="color:rgba(255,255,255,0.15)">...</td><td style="color:rgba(255,255,255,0.15)">...</td></tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="ev-label" style="margin-bottom:10px;">Fluxo de redirecionamento</div>
-        <div class="flow-steps">
-          <div class="fstep"><div class="fstep-num">1</div><div class="fstep-txt">Lead preenche a <strong>CloudPage</strong> hospedada no SFMC. Dados gravados em tempo real via <strong>UpsertData</strong> na DE de leads.</div></div>
-          <div class="fstep"><div class="fstep-num">2</div><div class="fstep-txt"><strong>AMPscript</strong> consulta a Mapa_Grupos pelo LojaCodigo selecionado e recupera o GrupoLink correspondente.</div></div>
-          <div class="fstep"><div class="fstep-num">3</div><div class="fstep-txt"><strong>Até 08/04:</strong> página de espera com cronômetro ativo. <strong>Após 08/04:</strong> redirecionamento automático para o grupo em 3 segundos.</div></div>
-          <div class="fstep"><div class="fstep-num">4</div><div class="fstep-txt"><strong>GTM</strong> dispara evento form_conversion no DataLayer enviando loja e campanha dinamicamente para o GA4.</div></div>
-        </div>
-        <div style="margin-top:14px;">
-          <div class="utm-k" style="margin-bottom:6px;">Rastreamento por canal (UTM)</div>
-          <div class="utm-grid">
-            <div class="utm-item"><div class="utm-k">utm_source</div><div class="utm-v">whatsapp / instagram / pdv</div></div>
-            <div class="utm-item"><div class="utm-k">utm_medium</div><div class="utm-v">mensagem / social / offline</div></div>
-            <div class="utm-item"><div class="utm-k">utm_campaign</div><div class="utm-v">copa2026_convite</div></div>
-          </div>
-        </div>
-      </div>
-
-      <p class="sub-label">Resultados</p>
-      <div class="big-results">
-        <div class="big-rcard yellow-bg">
-          <span class="big-num">150</span>
-          <span class="big-lbl">Lojas atendidas</span>
-        </div>
-        <div class="big-rcard blue-bg">
-          <span class="big-num">100%</span>
-          <span class="big-lbl">Atribuição no CRM</span>
-        </div>
-        <div class="big-rcard green-bg">
-          <span class="big-num">R$9k</span>
-          <span class="big-lbl">Faturamento iFood em 7 dias</span>
-        </div>
-        <div class="big-rcard navy">
-          <span class="big-num">US$300</span>
-          <span class="big-lbl">Economia mensal estimada</span>
-        </div>
-      </div>
-
-      <div class="tags">
-        <span class="tag tag-blue">HTML / CSS</span>
-        <span class="tag tag-blue">AMPscript</span>
-        <span class="tag tag-blue">Salesforce MC</span>
-        <span class="tag tag-blue">CloudPages</span>
-        <span class="tag tag-blue">Contact Builder</span>
-        <span class="tag tag-blue">GTM</span>
-        <span class="tag tag-blue">GA4</span>
-        <span class="tag tag-blue">WhatsApp</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- =========== P2: WHATSAPP CRM =========== -->
-  <div class="pcard">
-    <div class="pcard-top">
-      <div class="pcard-icon icon-orange">💬</div>
-      <div class="pcard-meta">
-        <p class="pcard-co">2026</p>
-        <h3 class="pcard-title">CRM via WhatsApp: canal sem conversão para ROAS 40x</h3>
-      </div>
-    </div>
-    <div class="pcard-body">
-      <p class="challenge orange"><strong>Canal sem estratégia, sem atribuição e sem conversão registrada.</strong> O WhatsApp servia só de SAC reativo. O trabalho foi construir do zero uma operação de CRM ativa — segmentação, régua, copy e dashboard de resultado próprio.</p>
-
-      <p class="sub-label orange">O que foi feito</p>
-      <div class="grid2">
-        <div class="mini"><p class="mini-lbl">Segmentação por intenção</p><p class="mini-txt">Mapeamento dos segmentos de maior potencial: novos beneficiários com saldo intacto, leads MQL sem pedido, recuperação de cancelados.</p></div>
-        <div class="mini"><p class="mini-lbl">Abordagem consultiva</p><p class="mini-txt">Copy orientado ao momento da jornada, sem apelo promocional. Opt-out em todos os disparos para proteger a reputação do canal.</p></div>
-        <div class="mini"><p class="mini-lbl">Integração Klaviyo e OctaDesk</p><p class="mini-txt">Webhook do Klaviyo dispara templates aprovados no WhatsApp via OctaDesk. Respostas caem direto no SAC, fechando o ciclo de atendimento.</p></div>
-        <div class="mini"><p class="mini-lbl">Atribuição de receita</p><p class="mini-txt">Dashboard construído do zero: apenas pedidos tagueados como "acionamento" contam. SAC orgânico excluído para não inflar resultado.</p></div>
-      </div>
-
-
-
-      <p class="sub-label orange">Resultados — segmento campeão</p>
-      <div class="big-results">
-        <div class="big-rcard yellow-bg">
-          <span class="big-num">40,6x</span>
-          <span class="big-lbl">ROAS</span>
-        </div>
-        <div class="big-rcard blue-bg">
-          <span class="big-num">5,88%</span>
-          <span class="big-lbl">Conversão</span>
-        </div>
-        <div class="big-rcard navy">
-          <span class="big-num">R$389</span>
-          <span class="big-lbl">Ticket médio</span>
-        </div>
-        <div class="big-rcard green-bg">
-          <span class="big-num">15 disparos</span>
-          <span class="big-lbl">Operação ativa</span>
-        </div>
-      </div>
-
-      <div class="tags">
-        <span class="tag tag-orange">Klaviyo</span>
-        <span class="tag tag-orange">OctaDesk</span>
-        <span class="tag tag-orange">WhatsApp API</span>
-        <span class="tag tag-orange">Webhook</span>
-        <span class="tag tag-orange">Atribuição de receita</span>
-        <span class="tag tag-orange">Copywriting</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- =========== P3: FOCUS NEWS =========== -->
-  <div class="pcard">
-    <div class="pcard-top">
-      <div class="pcard-icon icon-purple">📬</div>
-      <div class="pcard-meta">
-        <p class="pcard-co">2026</p>
-        <h3 class="pcard-title">Newsletter de Relacionamento — Canal de Engajamento com a Base</h3>
-      </div>
-    </div>
-    <div class="pcard-body">
-      <p class="challenge purple"><strong>Base de e-mail ativa, mas sem conteúdo que justificasse a presença.</strong> O desafio era criar um canal editorial real — com estrutura, cadência e pilares de conteúdo — que gerasse engajamento genuíno e não parecesse mais um e-mail promocional.</p>
-
-      <p class="sub-label purple">O que foi feito</p>
-      <div class="grid2">
-        <div class="mini"><p class="mini-lbl">Estrutura editorial</p><p class="mini-txt">Criação de 4 pilares de conteúdo com cadência semanal. Segmento A (4x/mês) e Segmento B (1x/mês) com régua diferenciada por nível de engajamento.</p></div>
-        <div class="mini"><p class="mini-lbl">Curadoria de conteúdo</p><p class="mini-txt">Conteúdo semanal de valor real para mães: benefícios educacionais, programas do governo, datas importantes. Sem apelo promocional.</p></div>
-        <div class="mini"><p class="mini-lbl">Infraestrutura de opt-in</p><p class="mini-txt">Landing page de confirmação, sequência de adesão e bloco de opt-in construídos do zero. Segmento A (4x/mês) vs Segmento B (1x/mês).</p></div>
-        <div class="mini"><p class="mini-lbl">Estratégia editorial</p><p class="mini-txt">Posicionado como "Rede de Apoio", nunca como newsletter. 4 pilares de conteúdo. 29 e-mails produzidos (16 SP e 13 DF) para o lançamento.</p></div>
-      </div>
-
-      <p class="sub-label purple">Assets produzidos</p>
-      <div class="email-previews">
-        <div class="ep-card">
-          <div class="ep-label"><span class="ep-dot"></span>E-mail de adesão</div>
-          <div class="ep-frame-wrap">
-            <iframe class="ep-frame" title="Email de adesão Newsletter" srcdoc='<!DOCTYPE html><html lang="pt-BR"><head><meta charset="UTF-8"/><style>body{margin:0;padding:0;background:#F0F4FF;font-family:Poppins,Arial,sans-serif;}table{border-collapse:collapse;}</style></head><body style="margin:0;padding:0;background:#F0F4FF;"><table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="background:#F0F4FF;"><tr><td align="center" style="padding:12px 8px 16px;"><table role="presentation" cellpadding="0" cellspacing="0" border="0" style="width:480px;max-width:100%;background:#fff;border-radius:16px;overflow:hidden;"><tr><td style="background:#0600FF;padding:20px 24px 18px;"><table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr><td style="background:rgba(255,255,255,0.18);border-radius:200px;padding:4px 12px;"><span style="font-family:Poppins,Arial,sans-serif;font-size:8px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:#fff;">Rede de Apoio &middot; SÃO PAULO</span></td></tr></table><p style="margin:12px 0 0;font-family:Poppins,Arial,sans-serif;font-size:18px;font-weight:700;color:#fff;line-height:1.25;">Toda quinta, as informações <br><span style="font-weight:300;font-style:italic;">que você precisa</span><br>chegam até você.</p></td></tr><tr><td style="padding:16px 24px 8px;"><p style="margin:0;font-family:Poppins,Arial,sans-serif;font-size:14px;color:#555F6E;line-height:1.75;">Oi, <strong style="color:#011d38;">Mãe</strong>!<br>A <strong style="color:#011d38;">Rede de Apoio</strong> é um conteúdo semanal gratuito da Focus.</p></td></tr><tr><td style="padding:6px 24px 0;"><p style="margin:0;font-family:Poppins,Arial,sans-serif;font-size:10px;font-weight:900;letter-spacing:0.2em;text-transform:uppercase;color:#0600FF;">O que você vai receber</p></td></tr><tr><td style="padding:8px 24px 0;"><table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="background:#F0F4FF;border-radius:12px;"><tr><td style="padding:12px 14px;"><table cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td style="width:32px;vertical-align:top;padding-right:8px;"><div style="width:28px;height:28px;background:#0600FF;border-radius:200px;text-align:center;"><span style="font-family:Poppins,Arial,sans-serif;font-size:11px;font-weight:700;color:#fff;line-height:28px;display:block;">01</span></div></td><td><p style="margin:0 0 2px;font-family:Poppins,Arial,sans-serif;font-size:12px;font-weight:700;color:#011d38;">Informações sobre vacinação</p><p style="margin:0;font-family:Poppins,Arial,sans-serif;font-size:11px;color:#555F6E;line-height:1.55;">Calendário com UBSs, endereços e horários.</p></td></tr></table></td></tr></table></td></tr><tr><td style="padding:6px 24px 0;"><table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="background:#011d38;border-radius:12px;"><tr><td style="padding:12px 14px;"><div style="background:#0600FF;border-radius:200px;padding:2px 8px;display:inline-block;margin-bottom:8px;"><span style="font-family:Poppins,Arial,sans-serif;font-size:8px;font-weight:700;text-transform:uppercase;color:#fff;">Mais pedido</span></div><table cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td style="width:32px;vertical-align:top;padding-right:8px;"><div style="width:28px;height:28px;border:1.5px solid rgba(255,255,255,0.25);border-radius:200px;text-align:center;"><span style="font-family:Poppins,Arial,sans-serif;font-size:11px;font-weight:700;color:#fff;line-height:26px;display:block;">02</span></div></td><td><p style="margin:0 0 2px;font-family:Poppins,Arial,sans-serif;font-size:12px;font-weight:700;color:#fff;">Benefícios gratuitos de SP</p><p style="margin:0;font-family:Poppins,Arial,sans-serif;font-size:11px;color:rgba(255,255,255,0.6);line-height:1.55;">Recreio nas Férias, CEU, SPCine e mais.</p></td></tr></table></td></tr></table></td></tr><tr><td style="padding:6px 24px 0;"><table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="background:#F0F4FF;border-radius:12px;"><tr><td style="padding:12px 14px;"><table cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td style="width:32px;vertical-align:top;padding-right:8px;"><div style="width:28px;height:28px;background:#47B5FF;border-radius:200px;text-align:center;"><span style="font-family:Poppins,Arial,sans-serif;font-size:11px;font-weight:700;color:#011d38;line-height:28px;display:block;">03</span></div></td><td><p style="margin:0 0 2px;font-family:Poppins,Arial,sans-serif;font-size:12px;font-weight:700;color:#011d38;">Novidades do DuePay em primeira mão</p><p style="margin:0;font-family:Poppins,Arial,sans-serif;font-size:11px;color:#555F6E;line-height:1.55;">Saldo, benefícios e calendário escolar.</p></td></tr></table></td></tr></table></td></tr><tr><td style="padding:10px 24px 20px;"><table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="background:#0600FF;border-radius:12px;"><tr><td style="padding:16px 18px;" align="center"><p style="margin:0 0 2px;font-family:Poppins,Arial,sans-serif;font-size:9px;font-weight:900;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.5);">Gratuito e semanal</p><p style="margin:0 0 4px;font-family:Poppins,Arial,sans-serif;font-size:16px;font-weight:700;color:#fff;">Toda quinta, às 19h.</p><p style="margin:0 0 12px;font-family:Poppins,Arial,sans-serif;font-size:10px;color:rgba(255,255,255,0.6);">Cancele quando quiser, sem complicação.</p><a href="#" style="font-family:Poppins,Arial,sans-serif;font-size:12px;font-weight:700;color:#0600FF;text-decoration:none;display:inline-block;background:#fff;padding:9px 24px;border-radius:200px;">QUERO FAZER PARTE</a></td></tr></table></td></tr></table></td></tr></table></body></html>'></iframe>
-          </div>
-        </div>
-        <div class="ep-card">
-          <div class="ep-label"><span class="ep-dot green"></span>LP Confirmação de inscrição</div>
-          <div class="ep-frame-wrap">
-            <iframe class="ep-frame" title="LP confirmação Newsletter" srcdoc='<!DOCTYPE html><html lang="pt-BR"><head><meta charset="UTF-8"/><style>*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}body{font-family:Inter,-apple-system,sans-serif;background:#fff;color:#0D1117;}.hl{background:#47B5FF;color:#011d38;padding:0 5px 2px;border-radius:4px;font-style:italic;}.pill-green{display:inline-flex;align-items:center;padding:4px 12px;border-radius:200px;font-size:9px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;background:#E6F9EE;color:#1A7F3C;border:1px solid #B2DFCC;}</style></head><body><div style="background:linear-gradient(180deg,#F0F4FF 0%,#fff 100%);padding:40px 24px 28px;text-align:center;"><div style="max-width:480px;margin:0 auto;"><div style="width:48px;height:48px;border-radius:50%;background:#0600FF;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M5 12.5L10 17.5L19 7" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span class="pill-green">Inscrição confirmada</span><h1 style="font-size:26px;font-weight:900;line-height:1.1;letter-spacing:-0.03em;color:#0D1117;margin-top:14px;">Agora você recebe <span class="hl">em primeira mão</span> notícias que facilitam a sua rotina.</h1></div></div><div style="padding:0 24px 24px;"><div style="max-width:440px;margin:0 auto;"><div style="background:#011d38;border-radius:12px;padding:18px 20px;display:flex;align-items:center;gap:14px;"><div style="width:40px;height:40px;border-radius:50%;background:rgba(71,181,255,0.18);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="18" rx="3" stroke="#47B5FF" stroke-width="2"/><path d="M8 2v4M16 2v4M3 10h18" stroke="#47B5FF" stroke-width="2" stroke-linecap="round"/></svg></div><div><p style="font-size:9px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#47B5FF;margin-bottom:3px;">Próxima edição</p><p style="font-size:14px;font-weight:700;color:#fff;line-height:1.3;">Quinta-feira, às 19h</p><p style="font-size:10px;color:rgba(255,255,255,0.45);margin-top:2px;">Confira a pasta Promoções se não aparecer na caixa de entrada.</p></div></div></div></div><footer style="padding:20px;text-align:center;"><p style="font-size:10px;color:#B0B8C4;">Rede de Apoio &middot; Focus Uniformes</p></footer></body></html>'></iframe>
-          </div>
-        </div>
-      </div>
-
-      <p class="sub-label purple">Bloco de opt-in reutilizável nas campanhas</p>
-      <div class="optin-demo">
-        <div class="optin-inner">
-          <div class="optin-eyebrow">Rede de Apoio</div>
-          <div class="optin-title">Toda quinta, novidades que fazem diferença na rotina escolar.</div>
-          <div class="optin-sub">Benefícios escolares, programas gratuitos e novidades sobre o DuePay, direto no seu e-mail.</div>
-          <div class="optin-cta-row">
-            <a href="#" class="optin-btn">Quero receber</a>
-            <div class="optin-avatars">
-              <div class="av av1">M</div>
-              <div class="av av2">A</div>
-              <div class="av av3">J</div>
-              <div style="margin-left:4px;">
-                <div class="av-strong">+2.000 mães</div>
-                <div class="av-hint">já recebem em primeira mão</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <p class="sub-label purple">Resultados</p>
-      <div class="results">
-        <div class="rpill"><span class="rpill-val yellow">4</span><span class="rpill-lbl">Pilares de conteúdo</span></div>
-        <div class="rpill"><span class="rpill-val lightblue">29</span><span class="rpill-lbl">E-mails produzidos</span></div>
-        <div class="rpill"><span class="rpill-val green">25%+</span><span class="rpill-lbl">Meta de OR</span></div>
-      </div>
-
-      <div class="tags">
-        <span class="tag tag-purple">Klaviyo</span>
-        <span class="tag tag-purple">Entregabilidade</span>
-        <span class="tag tag-purple">Email Marketing</span>
-        <span class="tag tag-purple">HTML/CSS</span>
-        <span class="tag tag-purple">SPF/DKIM/DMARC</span>
-        <span class="tag tag-purple">Content Strategy</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- =========== P4: ATRIBUIÇÃO DE RECEITA CRM =========== -->
-  <div class="pcard">
-    <div class="pcard-top">
-      <div class="pcard-icon icon-teal">📐</div>
+      <div class="pcard-icon icon-teal">🗄️</div>
       <div class="pcard-meta">
         <p class="pcard-co">2025 — 2026</p>
-        <h3 class="pcard-title">Atribuição de Receita CRM — Estrutura de Dados para o BI</h3>
+        <h3 class="pcard-title">Arquitetura de Atribuição de Receita no SFMC</h3>
       </div>
     </div>
     <div class="pcard-body">
-      <p class="challenge teal"><strong>Sem modelo de atribuição, sem clareza de receita.</strong> Os segmentos se sobrepunham, o BI não conseguia rastrear origem dos dados e as campanhas eram invisíveis nos relatórios da diretoria.</p>
+      <p class="challenge teal"><strong>A operação de e-mail gerava vendas que ninguém conseguia rastrear.</strong> Para resolver isso, projetei uma arquitetura de atribuição com janela de 5 dias pós-clique. O resultado foi uma base consolidada e pronta para análise, reduzindo o trabalho manual do time de Dados e entregando indicadores confiáveis para a diretoria.
 
-      <p class="sub-label teal">O que foi construído</p>
+</p>
+
+      <p class="sub-label teal">Arquitetura construída no SFMC</p>
       <div class="grid2">
-        <div class="mini"><p class="mini-lbl">Modelo de Atribuição</p><p class="mini-txt">Definição do modelo oficial por clique (janela 5 dias) e complementar por abertura. Documentação da leitura correta para cada canal: e-mail, WhatsApp e push.</p></div>
-        <div class="mini"><p class="mini-lbl">Arquitetura da base no Salesforce</p><p class="mini-txt">Base estruturada com chave composta JobID + Data_Venda. Mesma campanha pode gerar vendas em vários dias, aparecendo repetida com a data de conversão correta.</p></div>
-        <div class="mini"><p class="mini-lbl">Pipeline de exportação para BI</p><p class="mini-txt">Dois arquivos gerados automaticamente: histórico de 180 dias (crm_metricas_180d.csv) e incremental diário. Exportação via SFTP com regra de upsert — nunca append simples.</p></div>
-        <div class="mini"><p class="mini-lbl">Segmentação RFV na base</p><p class="mini-txt">7 grupos hierárquicos sem sobreposição criados nas Data Extensions: Campeão, Potenciais, Leais, Recentes, Morno, Em risco e Novos Leads. Cada cliente em apenas um segmento.</p></div>
+        <div class="mini"><p class="mini-lbl">DATA EXTENSION Cliques — limpeza de dados</p><p class="mini-txt">SQL no Query Studio filtra cliques nas campanhas. Ponto de entrada limpo para toda a cadeia de atribuição.</p></div>
+        <div class="mini"><p class="mini-lbl">Chave composta JobID + Data_Venda</p><p class="mini-txt">Mesma campanha pode converter em dias diferentes. A chave composta garante que cada linha represente uma conversão única, preservando a granularidade do dado.</p></div>
+        <div class="mini"><p class="mini-lbl">Regra de negócio — janela de 5 dias</p><p class="mini-txt">Query valida se a venda ocorreu dentro de 5 dias após o clique. Lógica documentada, auditável e replicável pelo time de dados sem depender de memória ou interpretação manual.</p></div>
+        <div class="mini"><p class="mini-lbl">DATA EXTENSION KPIs</p><p class="mini-txt">Tabela final com receita, pedidos, ROI e CAC por campanha, gerada automaticamente pelo Automation Studio. Time de dados recebe o arquivo pronto, sem cruzamentos manuais.</p></div>
       </div>
 
-      <p class="sub-label teal">Modelo de atribuição</p>
-      <div class="attr-grid">
-        <div class="attr-block click">
-          <div class="attr-block-title">Modelo por Clique (OFICIAL)</div>
-          <div class="attr-item">Janela de atribuição <span>5 dias após clique</span></div>
-          <div class="attr-item">Confiabilidade <span>Alta (intenção explícita)</span></div>
-          <div class="attr-item">Uso <span>Número oficial de receita</span></div>
-          <div class="attr-item">Métricas <span>Vendas, Faturamento, ROI, CAC</span></div>
+      <p class="sub-label teal">Pipeline de dados no Automation Studio</p>
+      <div class="evblock">
+        <div class="ev-label">Sequência de execução — Query Studio → Data Extensions</div>
+        <div class="flow-steps">
+          <div class="fstep"><div class="fstep-num">1</div><div class="fstep-txt"><strong>DE_Cliques_Limpos</strong> — SQL filtra cliques reais das últimas 24h. Garante que só intenção explícita entre na janela.</div></div>
+          <div class="fstep"><div class="fstep-num">2</div><div class="fstep-txt"><strong>DE_Vendas_CRM</strong> — cruza cliques com pedidos pelo subscriber key. Aplica a regra de negócio: venda deve ocorrer em até 5 dias após o clique.</div></div>
+          <div class="fstep"><div class="fstep-num">3</div><div class="fstep-txt"><strong>DE_KPIs_Campanha</strong> — consolida por chave composta JobID + Data_Venda. Cada linha = uma conversão única. Receita, pedidos, ROI e CAC por campanha e por dia.</div></div>
+          <div class="fstep"><div class="fstep-num">4</div><div class="fstep-txt"><strong>Automation Studio</strong> executa a sequência diariamente. BI recebe dado limpo e auditável.</div></div>
         </div>
-
       </div>
 
       <p class="sub-label teal">Segmentação RFV nas Data Extensions</p>
@@ -584,31 +340,276 @@ body{font-family:'Inter',-apple-system,sans-serif;background:var(--bg);color:var
       <div class="results">
         <div class="rpill"><span class="rpill-val yellow">7</span><span class="rpill-lbl">Segmentos RFV</span></div>
         <div class="rpill"><span class="rpill-val green">0</span><span class="rpill-lbl">Sobreposição</span></div>
-        <div class="rpill"><span class="rpill-val lightblue">180d</span><span class="rpill-lbl">Histórico no BI</span></div>
-        <div class="rpill"><span class="rpill-val yellow">533k</span><span class="rpill-lbl">Contatos na base</span></div>
+        <div class="rpill"><span class="rpill-val lightblue">5d</span><span class="rpill-lbl">Janela de atribuição</span></div>
+        <div class="rpill"><span class="rpill-val yellow">0</span><span class="rpill-lbl">Cruzamentos manuais</span></div>
       </div>
 
       <div class="tags">
+        <span class="tag tag-teal">Salesforce Marketing Cloud</span>
         <span class="tag tag-teal">SQL / Query Studio</span>
-        <span class="tag tag-teal">Data Extensions</span>
         <span class="tag tag-teal">Automation Studio</span>
-        <span class="tag tag-teal">SFTP</span>
-        <span class="tag tag-teal">BI / Analytics</span>
+        <span class="tag tag-teal">Data Extensions</span>
+        <span class="tag tag-teal">Journey Builder</span>
         <span class="tag tag-teal">Modelo de Atribuição</span>
-        <span class="tag tag-teal">Contact Builder</span>
+        <span class="tag tag-teal">BI / Analytics</span>
       </div>
     </div>
   </div>
+  <!-- =========== P2: WHATSAPP CRM =========== -->
+  <div class="pcard">
+    <div class="pcard-top">
+      <div class="pcard-icon icon-orange">💬</div>
+      <div class="pcard-meta">
+        <p class="pcard-co">2026</p>
+        <h3 class="pcard-title">WhatsApp CRM: Novo canal com ROAS 40x</h3>
+      </div>
+    </div>
+    <div class="pcard-body">
+      <p class="challenge orange"><strong>O canal existia, mas não era utilizado no CRM.</strong> Apenas o time de vendas disparava mensagens, mas sem segmentação, sem copy personalizada e sem horário testado.</p>
+
+      <p class="sub-label orange">O que foi feito</p>
+      <div class="grid2">
+        <div class="mini"><p class="mini-lbl">Diagnóstico de persona</p><p class="mini-txt">Mapeamento do perfil: momento de jornada, gatilhos de decisão e sensibilidade a tom e urgência. Base para todas as decisões de copy e segmento.</p></div>
+        <div class="mini"><p class="mini-lbl">Hipóteses testadas</p><p class="mini-txt">Cada disparo documentado como teste com variável isolada: segmento vs. copy vs. horário. Aprendizado acumulado em 15 disparos: público é a alavanca nº 1.</p></div>
+        <div class="mini"><p class="mini-lbl">Garantia de Opt-Out</p><p class="mini-txt">Incluí uma saída amigável e clara em todas as mensagens para blindar o canal contra bloqueios e preservar a reputação do número corporativo.</p></div>
+        <div class="mini"><p class="mini-lbl">Régua segmentada por perfil</p><p class="mini-txt">Cada público com abordagem e copy própria. Webhook Klaviyo → OctaDesk fecha o ciclo: resposta cai direto no SAC.</p></div>
+      </div>
+
+
+
+      <p class="sub-label orange">Resultados — segmento campeão</p>
+      <div class="big-results">
+        <div class="big-rcard yellow-bg">
+          <span class="big-num">40,6x</span>
+          <span class="big-lbl">ROAS</span>
+        </div>
+        <div class="big-rcard blue-bg">
+          <span class="big-num">5,88%</span>
+          <span class="big-lbl">Conversão</span>
+        </div>
+        <div class="big-rcard navy">
+          <span class="big-num">R$389</span>
+          <span class="big-lbl">Ticket médio</span>
+        </div>
+        <div class="big-rcard green-bg">
+          <span class="big-num">15 disparos</span>
+          <span class="big-lbl">Operação ativa</span>
+        </div>
+      </div>
+
+      <div class="tags">
+        <span class="tag tag-orange">Klaviyo</span>
+        <span class="tag tag-orange">OctaDesk</span>
+        <span class="tag tag-orange">WhatsApp API</span>
+        <span class="tag tag-orange">Webhook</span>
+        <span class="tag tag-orange">Atribuição de receita</span>
+        <span class="tag tag-orange">Copywriting</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========== P3: COPA DO MUNDO =========== -->
+  <div class="pcard">
+    <div class="pcard-top">
+      <div class="pcard-icon icon-blue">🌐</div>
+      <div class="pcard-meta">
+        <p class="pcard-co">2025</p>
+        <h3 class="pcard-title">Funil de Aquisição Omnichannel</h3>
+      </div>
+    </div>
+    <div class="pcard-body">
+      <p class="challenge"><strong>O Problema: conectar leads de 150 lojas físicas aos seus respectivos grupos de WhatsApp de forma automática e rastreável.</strong> O desafio era direcionar cada lead captado para o grupo de WhatsApp correto, por região, de forma automática, com rastreamento completo e sem depender de plataformas externas.</p>
+
+      <p class="sub-label">O que foi feito</p>
+      <div class="grid2">
+        <div class="mini"><p class="mini-lbl">Captura e segmentação</p><p class="mini-txt">Landing Page hospedada no Salesforce com captura em tempo real e seleção de loja pelo próprio lead. Dados gravados via UpsertData na Data Extension.</p></div>
+        <div class="mini"><p class="mini-lbl">Redirecionamento automático</p><p class="mini-txt">AMPscript consulta o Mapa de Grupos por LojaCodigo e redireciona para o link de WhatsApp correto após 3 segundos do cadastro.</p></div>
+        <div class="mini"><p class="mini-lbl">Lista de espera com cronômetro</p><p class="mini-txt">Página de espera até data de lançamento para gerar antecipação. Após a data do lançamento: redirecionamento automático para o grupo da unidade.</p></div>
+        <div class="mini"><p class="mini-lbl">Rastreamento completo</p><p class="mini-txt">GTM com evento form_conversion no DataLayer. UTMs por canal (Instagram, PDV, Ads).</p></div>
+      </div>
+
+      <p class="sub-label">Landing page interativa</p>
+      <div class="device-showcase">
+        <div class="device-wrap">
+          <p class="device-label-top">Página de cadastro</p>
+          <div class="phone-frame">
+            <div class="phone-notch"></div>
+            <div class="phone-screen">
+              <iframe title="Landing page Copa 2026" src="pagina_de_cadastro.html" style="width:100%;height:100%;border:none;display:block;"></iframe></iframe>
+            </div>
+          </div>
+        </div>
+        <div class="device-wrap">
+          <p class="device-label-top">Página de espera com cronômetro</p>
+          <div class="phone-frame">
+            <div class="phone-notch"></div>
+            <div class="phone-screen">
+              <iframe title="Página de espera Copa 2026" src="contagem_regressiva.html" style="width:100%;height:100%;border:none;display:block;"></iframe></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p class="sub-label">Arquitetura técnica no Salesforce</p>
+      <div class="evblock">
+        <div class="ev-label">Data Extensions no Contact Builder</div>
+        <div class="de-name">Leads_Grupo_WhatsApp_Copa2026</div>
+        <div class="de-path">Extensões de Dados / Jornada / Leads_Grupo_WhatsApp_Copa2026</div>
+        <div style="overflow-x:auto;margin-bottom:16px;">
+          <table class="de-table">
+            <thead><tr><th>LeadKey</th><th>Nome</th><th>LojaCodigo</th><th>Região</th><th>Tag</th><th>OptIn</th><th>utm_source</th><th>utm_campaign</th></tr></thead>
+            <tbody>
+              <tr><td class="td-blue">554499999999</td><td>Milena</td><td>REG_MARINGA</td><td>Maringá</td><td class="td-hl">Colecionador Copa 2026</td><td class="td-hl">True</td><td>whatsapp</td><td>copa2026_convite</td></tr>
+              <tr><td class="td-blue">554499999999</td><td>Vitor</td><td>REG_MARINGA</td><td>Maringá</td><td class="td-hl">Colecionador Copa 2026</td><td class="td-hl">True</td><td>whatsapp</td><td>copa2026_convite</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="de-name">Mapa_Grupos_WhatsApp_Copa2026</div>
+        <div class="de-path">Extensões de Dados / Jornada / Mapa_Grupos_WhatsApp_Copa2026</div>
+        <div style="overflow-x:auto;margin-bottom:16px;">
+          <table class="de-table">
+            <thead><tr><th>LojaCodigo</th><th>GrupoLink</th><th>LojaName</th><th>Região</th></tr></thead>
+            <tbody>
+              <tr><td class="td-hl">REG_MARINGA</td><td class="td-blue">chat.whatsapp.com</td><td>Maringá e região</td><td>Maringá</td></tr>
+              <tr><td style="color:rgba(255,255,255,0.2)">+ 149 lojas</td><td style="color:rgba(255,255,255,0.15)">...</td><td style="color:rgba(255,255,255,0.15)">...</td><td style="color:rgba(255,255,255,0.15)">...</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="ev-label" style="margin-bottom:10px;">Fluxo de redirecionamento</div>
+        <div class="flow-steps">
+          <div class="fstep"><div class="fstep-num">1</div><div class="fstep-txt">Lead preenche a <strong>CloudPage</strong> hospedada no SFMC. Dados gravados em tempo real via <strong>UpsertData</strong> na DE de leads.</div></div>
+          <div class="fstep"><div class="fstep-num">2</div><div class="fstep-txt"><strong>AMPscript</strong> consulta a Mapa_Grupos pelo LojaCodigo selecionado e recupera o GrupoLink correspondente.</div></div>
+          <div class="fstep"><div class="fstep-num">3</div><div class="fstep-txt"><strong>Até abertura:</strong> página de espera com cronômetro ativo. <strong>Após abertura:</strong> redirecionamento automático para o grupo em 3 segundos.</div></div>
+          <div class="fstep"><div class="fstep-num">4</div><div class="fstep-txt"><strong>GTM</strong> dispara evento form_conversion no DataLayer enviando loja e campanha dinamicamente para o GA4.</div></div>
+        </div>
+        <div style="margin-top:14px;">
+          <div class="utm-k" style="margin-bottom:6px;">Rastreamento por canal (UTM)</div>
+          <div class="utm-grid">
+            <div class="utm-item"><div class="utm-k">utm_source</div><div class="utm-v">whatsapp / instagram / pdv</div></div>
+            <div class="utm-item"><div class="utm-k">utm_medium</div><div class="utm-v">mensagem / social / offline</div></div>
+            <div class="utm-item"><div class="utm-k">utm_campaign</div><div class="utm-v">copa2026_convite</div></div>
+          </div>
+        </div>
+      </div>
+
+      <p class="sub-label">Resultados</p>
+      <div class="big-results">
+        <div class="big-rcard yellow-bg">
+          <span class="big-num">150</span>
+          <span class="big-lbl">Lojas atendidas</span>
+        </div>
+        <div class="big-rcard blue-bg">
+          <span class="big-num">100%</span>
+          <span class="big-lbl">Atribuição no CRM</span>
+        </div>
+        <div class="big-rcard green-bg">
+          <span class="big-num">R$9k</span>
+          <span class="big-lbl">Faturamento por canal em 7 dias</span>
+        </div>
+        <div class="big-rcard navy">
+          <span class="big-num">+R$1.500</span>
+          <span class="big-lbl">Economia plataformas redirecionamento</span>
+        </div>
+      </div>
+
+      <div class="tags">
+        <span class="tag tag-blue">HTML / CSS</span>
+        <span class="tag tag-blue">AMPscript</span>
+        <span class="tag tag-blue">Salesforce MC</span>
+        <span class="tag tag-blue">CloudPages</span>
+        <span class="tag tag-blue">Contact Builder</span>
+        <span class="tag tag-blue">GTM</span>
+        <span class="tag tag-blue">GA4</span>
+        <span class="tag tag-blue">WhatsApp</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========== P4: NEWSLETTER =========== -->
+  <div class="pcard">
+    <div class="pcard-top">
+      <div class="pcard-icon icon-purple">📬</div>
+      <div class="pcard-meta">
+        <p class="pcard-co">2026</p>
+        <h3 class="pcard-title">Newsletter de Relacionamento</h3>
+      </div>
+    </div>
+    <div class="pcard-body">
+      <p class="challenge purple"><strong>Durante o período em que os clientes ainda não podiam realizar compras, o principal desafio era evitar a perda de engajamento da base e preservar a reputação de envio.</p> 
+
+      <p class="sub-label purple">O que foi feito</p>
+      <div class="grid2">
+        <div class="mini"><p class="mini-lbl">Estrutura editorial</p><p class="mini-txt">Criação de 4 pilares de conteúdo com cadência semanal. Segmento A (4x/mês) e Segmento B (1x/mês) com régua diferenciada por nível de engajamento.</p></div>
+        <div class="mini"><p class="mini-lbl">Curadoria de conteúdo</p><p class="mini-txt">Conteúdo semanal de valor real para mães: benefícios educacionais, programas do governo, datas importantes. Sem apelo promocional.</p></div>
+        <div class="mini"><p class="mini-lbl">Infraestrutura de opt-in</p><p class="mini-txt">Desenvolvi formulários limpos de captação e páginas de confirmação focadas em garantir o interesse real do usuário desde o primeiro dia.</p></div>
+        <div class="mini"><p class="mini-lbl">Segurança Técnica</p><p class="mini-txt">Assegurei padrões elevados de envio acompanhando de perto métricas de saúde dos provedores e o comportamento da base nos primeiros disparos.</p></div>
+      </div>
+
+      <p class="sub-label purple">Assets produzidos</p>
+      <div class="email-previews">
+        <div class="ep-card">
+          <div class="ep-label"><span class="ep-dot"></span>E-mail de adesão</div>
+          <div class="ep-frame-wrap">
+            <iframe class="ep-frame" title="Email de adesão Newsletter" srcdoc='<!DOCTYPE html><html lang="pt-BR"><head><meta charset="UTF-8"/><style>body{margin:0;padding:0;background:#F0F4FF;font-family:Poppins,Arial,sans-serif;}table{border-collapse:collapse;}</style></head><body style="margin:0;padding:0;background:#F0F4FF;"><table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="background:#F0F4FF;"><tr><td align="center" style="padding:12px 8px 16px;"><table role="presentation" cellpadding="0" cellspacing="0" border="0" style="width:480px;max-width:100%;background:#fff;border-radius:16px;overflow:hidden;"><tr><td style="background:#0600FF;padding:20px 24px 18px;"><table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr><td style="background:rgba(255,255,255,0.18);border-radius:200px;padding:4px 12px;"><span style="font-family:Poppins,Arial,sans-serif;font-size:8px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:#fff;">NEWSLETTER</span></td></tr></table><p style="margin:12px 0 0;font-family:Poppins,Arial,sans-serif;font-size:18px;font-weight:700;color:#fff;line-height:1.25;">Toda quinta, as informações <br><span style="font-weight:300;font-style:italic;">que você precisa</span><br>chegam até você.</p></td></tr><tr><td style="padding:16px 24px 8px;"><p style="margin:0;font-family:Poppins,Arial,sans-serif;font-size:14px;color:#555F6E;line-height:1.75;">Oi, <strong style="color:#011d38;">Mãe</strong>!<br>A <strong style="color:#011d38;">NEWSLETTER</strong> é um conteúdo semanal gratuito.</p></td></tr><tr><td style="padding:6px 24px 0;"><p style="margin:0;font-family:Poppins,Arial,sans-serif;font-size:10px;font-weight:900;letter-spacing:0.2em;text-transform:uppercase;color:#0600FF;">O que você vai receber</p></td></tr><tr><td style="padding:8px 24px 0;"><table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="background:#F0F4FF;border-radius:12px;"><tr><td style="padding:12px 14px;"><table cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td style="width:32px;vertical-align:top;padding-right:8px;"><div style="width:28px;height:28px;background:#0600FF;border-radius:200px;text-align:center;"><span style="font-family:Poppins,Arial,sans-serif;font-size:11px;font-weight:700;color:#fff;line-height:28px;display:block;">01</span></div></td><td><p style="margin:0 0 2px;font-family:Poppins,Arial,sans-serif;font-size:12px;font-weight:700;color:#011d38;">Informações sobre vacinação</p><p style="margin:0;font-family:Poppins,Arial,sans-serif;font-size:11px;color:#555F6E;line-height:1.55;">Calendário com UBSs, endereços e horários.</p></td></tr></table></td></tr></table></td></tr><tr><td style="padding:6px 24px 0;"><table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="background:#011d38;border-radius:12px;"><tr><td style="padding:12px 14px;"><div style="background:#0600FF;border-radius:200px;padding:2px 8px;display:inline-block;margin-bottom:8px;"><span style="font-family:Poppins,Arial,sans-serif;font-size:8px;font-weight:700;text-transform:uppercase;color:#fff;">Mais pedido</span></div><table cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td style="width:32px;vertical-align:top;padding-right:8px;"><div style="width:28px;height:28px;border:1.5px solid rgba(255,255,255,0.25);border-radius:200px;text-align:center;"><span style="font-family:Poppins,Arial,sans-serif;font-size:11px;font-weight:700;color:#fff;line-height:26px;display:block;">02</span></div></td><td><p style="margin:0 0 2px;font-family:Poppins,Arial,sans-serif;font-size:12px;font-weight:700;color:#fff;">Benefícios gratuitos de SP</p><p style="margin:0;font-family:Poppins,Arial,sans-serif;font-size:11px;color:rgba(255,255,255,0.6);line-height:1.55;">Recreio nas Férias, CEU, SPCine e mais.</p></td></tr></table></td></tr></table></td></tr><tr><td style="padding:6px 24px 0;"><table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="background:#F0F4FF;border-radius:12px;"><tr><td style="padding:12px 14px;"><table cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td style="width:32px;vertical-align:top;padding-right:8px;"><div style="width:28px;height:28px;background:#47B5FF;border-radius:200px;text-align:center;"><span style="font-family:Poppins,Arial,sans-serif;font-size:11px;font-weight:700;color:#011d38;line-height:28px;display:block;">03</span></div></td><td><p style="margin:0 0 2px;font-family:Poppins,Arial,sans-serif;font-size:12px;font-weight:700;color:#011d38;">Novidades do DuePay em primeira mão</p><p style="margin:0;font-family:Poppins,Arial,sans-serif;font-size:11px;color:#555F6E;line-height:1.55;">Saldo, benefícios e calendário escolar.</p></td></tr></table></td></tr></table></td></tr><tr><td style="padding:10px 24px 20px;"><table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="background:#0600FF;border-radius:12px;"><tr><td style="padding:16px 18px;" align="center"><p style="margin:0 0 2px;font-family:Poppins,Arial,sans-serif;font-size:9px;font-weight:900;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.5);">Gratuito e semanal</p><p style="margin:0 0 4px;font-family:Poppins,Arial,sans-serif;font-size:16px;font-weight:700;color:#fff;">Toda quinta, às 19h.</p><p style="margin:0 0 12px;font-family:Poppins,Arial,sans-serif;font-size:10px;color:rgba(255,255,255,0.6);">Cancele quando quiser, sem complicação.</p><a href="#" style="font-family:Poppins,Arial,sans-serif;font-size:12px;font-weight:700;color:#0600FF;text-decoration:none;display:inline-block;background:#fff;padding:9px 24px;border-radius:200px;">QUERO FAZER PARTE</a></td></tr></table></td></tr></table></td></tr></table></body></html>'></iframe>
+          </div>
+        </div>
+        <div class="ep-card">
+          <div class="ep-label"><span class="ep-dot green"></span>LP Confirmação de inscrição</div>
+          <div class="ep-frame-wrap">
+            <iframe class="ep-frame" title="LP confirmação Newsletter" srcdoc='<!DOCTYPE html><html lang="pt-BR"><head><meta charset="UTF-8"/><style>*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}body{font-family:Inter,-apple-system,sans-serif;background:#fff;color:#0D1117;}.hl{background:#47B5FF;color:#011d38;padding:0 5px 2px;border-radius:4px;font-style:italic;}.pill-green{display:inline-flex;align-items:center;padding:4px 12px;border-radius:200px;font-size:9px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;background:#E6F9EE;color:#1A7F3C;border:1px solid #B2DFCC;}</style></head><body><div style="background:linear-gradient(180deg,#F0F4FF 0%,#fff 100%);padding:40px 24px 28px;text-align:center;"><div style="max-width:480px;margin:0 auto;"><div style="width:48px;height:48px;border-radius:50%;background:#0600FF;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M5 12.5L10 17.5L19 7" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span class="pill-green">Inscrição confirmada</span><h1 style="font-size:26px;font-weight:900;line-height:1.1;letter-spacing:-0.03em;color:#0D1117;margin-top:14px;">Agora você recebe <span class="hl">em primeira mão</span> notícias que facilitam a sua rotina.</h1></div></div><div style="padding:0 24px 24px;"><div style="max-width:440px;margin:0 auto;"><div style="background:#011d38;border-radius:12px;padding:18px 20px;display:flex;align-items:center;gap:14px;"><div style="width:40px;height:40px;border-radius:50%;background:rgba(71,181,255,0.18);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="18" rx="3" stroke="#47B5FF" stroke-width="2"/><path d="M8 2v4M16 2v4M3 10h18" stroke="#47B5FF" stroke-width="2" stroke-linecap="round"/></svg></div><div><p style="font-size:9px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#47B5FF;margin-bottom:3px;">Próxima edição</p><p style="font-size:14px;font-weight:700;color:#fff;line-height:1.3;">Quinta-feira, às 19h</p><p style="font-size:10px;color:rgba(255,255,255,0.45);margin-top:2px;">Confira a pasta Promoções se não aparecer na caixa de entrada.</p></div></div></div></div><footer style="padding:20px;text-align:center;"><p style="font-size:10px;color:#B0B8C4;">NEWSLETTER</p></footer></body></html>'></iframe>
+          </div>
+        </div>
+      </div>
+
+      <p class="sub-label purple">Bloco de opt-in reutilizável nas campanhas</p>
+      <div class="optin-demo">
+        <div class="optin-inner">
+          <div class="optin-eyebrow">NEWSLETTER</div>
+          <div class="optin-title">Toda quinta, novidades que fazem diferença na rotina escolar.</div>
+          <div class="optin-sub">Benefícios escolares, programas gratuitos e novidades sobre o DuePay, direto no seu e-mail.</div>
+          <div class="optin-cta-row">
+            <a href="#" class="optin-btn">Quero receber</a>
+            <div class="optin-avatars">
+              <div class="av av1">M</div>
+              <div class="av av2">A</div>
+              <div class="av av3">J</div>
+              <div style="margin-left:4px;">
+                <div class="av-strong">+2.000 mães</div>
+                <div class="av-hint">já recebem em primeira mão</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p class="sub-label purple">Resultados</p>
+      <div class="results">
+        <div class="rpill"><span class="rpill-val yellow">4</span><span class="rpill-lbl">Pilares de conteúdo</span></div>
+        <div class="rpill"><span class="rpill-val lightblue">29</span><span class="rpill-lbl">E-mails produzidos</span></div>
+        <div class="rpill"><span class="rpill-val green">25%+</span><span class="rpill-lbl">Meta de OR</span></div>
+      </div>
+
+      <div class="tags">
+        <span class="tag tag-purple">Klaviyo</span>
+        <span class="tag tag-purple">Entregabilidade</span>
+        <span class="tag tag-purple">Email Marketing</span>
+        <span class="tag tag-purple">HTML/CSS</span>
+        <span class="tag tag-purple">SPF/DKIM/DMARC</span>
+        <span class="tag tag-purple">Content Strategy</span>
+      </div>
+    </div>
+  </div>
+
 
 </div>
 
 <!-- FOOTER -->
 <footer class="footer">
-  <div class="pill-green" style="margin-bottom:16px;">Disponível para novas oportunidades</div>
+  <div class="pill-green" style="margin-bottom:16px;">Disponível para novos projetos</div>
   <p class="footer-name">Milena Andrade</p>
   <p class="footer-detail">milenacauane.a@gmail.com</p>
   <p class="footer-detail">(44) 99995-8030 &middot; Maringá, PR</p>
-  <p class="footer-detail" style="margin-top:8px;"><a href="https://www.linkedin.com/in/milenacauane-84485620b" target="_blank">LinkedIn</a></p>
+  <p class="footer-detail" style="margin-top:8px;"><a href="https://www.linkedin.com/in/milena-cauane-84485620b/" target="_blank">LinkedIn</a></p>
 </footer>
 
 </body>
